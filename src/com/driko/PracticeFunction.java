@@ -13,7 +13,11 @@ public class PracticeFunction {
 
         /* jika ingin menampilkan atau mencetak hasil dari sebuah method.
         maka tidak diperlukan sebuah syntax System.out.println
-        KECUALI VOID */
+        KECUALI VOID
+
+        namamethod = ();
+
+        */
 
 
         picture(inptheight, inptwidth);

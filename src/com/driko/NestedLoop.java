@@ -5,35 +5,89 @@ public class NestedLoop {
     public static void main(String[] args) {
 
         //Deklarasikan Variable
-        int k, i;
+/*
+        o
+      ^/v
+      / >
+*/
+        // Left Side
 
 
-        for (k = 0; k < 5; k++){
+        /*
 
-//            System.out.println(" *");
-            
-            for (i = 0; i < k; i++) {
-                System.out.print(" *");
+                    *
+                  * *
+                * * *
+              * * * *
+            * * * * *
+              * * * *
+                * * *
+                  * *
+                    *
+
+         */
+
+
+
+        for (int c = 0; c < 7 ; c++){
+
+
+            for (int l = 0; l < 7 - c; l++) {
+                System.out.print(" ");
             }
 
+            for (int lt = 0; lt < c ; lt++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
 
-
-            System.out.printf("%n");
         }
 
-        for (k = 0; k < 5; k++){
+        for (int cb = 0; cb < 7 ; cb++){
 
-//            System.out.println(" *");
 
-            for (i = 0; i < k; i++) {
+            for (int lb = 0; lb < 7 - cb; lb++) {
+                System.out.print(" ");
+            }
+
+            for (int ltb = 0; ltb < cb ; ltb++) {
+                System.out.print(" *");
+            }
+            System.out.print("\n");
+
+        }
+
+
+
+        // Right Side
+
+        /*
+
+            *
+            * *
+            * * *
+            * * * *
+            * * * * *
+            * * * *
+            * * *
+            * *
+            *
+
+        */
+
+
+
+        for (int c = 0; c < 5; c++){
+
+            for (int l = 0; l < c; l++) {
                 System.out.print(" *");
             }
             System.out.printf("%n");
         }
-
 
         for (int coloums = 0; coloums < 5; coloums++){
-            for (int lines = 0; lines <= coloums; lines++) {
+
+            for (int lines = 0; lines < 5 - coloums; lines++) {
                 System.out.print(" *");
             }
             System.out.println(" ");
