@@ -26,8 +26,8 @@ public class BasicArray {
 //        darrayt[3] = 20.3;
 //
 //        System.out.println(darrayt[0]);
-    //                             =       0           1        2       3        4        5         6          7          8
-    //                             =       |           |        |       |        |        |         |          |          |
+//                                 =       0           1        2       3        4        5         6          7          8
+//                                 =       |           |        |       |        |        |         |          |          |
         String[] twice = new String[] {"Nayeon", "Jeongyeon", "Momo", "Sana", "Jihyo", "Mina", "MyQueen", "Chaeyoung", "Tzuyu"};
 
         twice[6] = "Dahyun";
@@ -62,6 +62,17 @@ public class BasicArray {
 
         // TODO Array menggunakan For each
 
+        /*
+        For Each memungkinkan kita untuk melakukan looping otomatis (sesuai jumlah arraynya)
+        tanpa menggunakan indeks. for each biasa digunakan ketika kita ingin melakukan looping tanpa mengambil
+        indeksnya,
 
+
+        */
+/////// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        for (String queen : twice) {
+            System.out.println(queen);
+        }
+/////// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     }
 }
