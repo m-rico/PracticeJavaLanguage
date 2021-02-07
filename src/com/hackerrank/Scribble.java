@@ -1,28 +1,51 @@
 package com.hackerrank;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Scribble {
     public static void main(String[] args) {
+
+        System.out.println("Kim Dahyun");
         System.out.print("\n");
-        System.out.println("Untuk coret-coret dan test mekanisme program");
+
+        int[][] arrayTwice = {
+                {1,2,3},
+                {4,5,6},
+                {7,8,9}
+        };
+
         System.out.print("\n");
+        printDubu(arrayTwice);
 
-        Scanner sysinpt = new Scanner(System.in);
-
-
-        int k, i, m;
-
-        System.out.print("Insert : ");
-        k = sysinpt.nextInt();
-        i = sysinpt.nextInt();
+    }// batas main Method
 
 
+    private static void printDubu(int[][] swag) {
+
+        for (int k = 0; k < swag.length; k++){
+            System.out.print("[");
+            for (int i = 0; i < swag[k].length; i++) {
+
+                System.out.print(i);
+
+//                System.out.print(swag[i][k]);
+//
+//                if (i < swag.length - 1){
+//                    System.out.print(",");
+//                } else {
+//                    System.out.print("]\n");
+//                }
+            }
+        }
 
 
 
+//        for (int k = 0; k < swag.length; k++) {
+//            System.out.println());
+//        }
+    } // batas method printdubu
 
-        m = (int) Math.pow(k, i);
-        System.out.println(m);
-    }
+
 }
+

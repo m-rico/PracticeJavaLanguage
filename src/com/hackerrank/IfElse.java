@@ -1,10 +1,12 @@
 package com.hackerrank;
 
 import javax.swing.*;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class IfElse {
-    public static void main (String[] args){
+    public static void main (String[] args) throws IOException {
         System.out.print("\n");
         System.out.println(" Kim Dahyun");
         System.out.print("\n");
@@ -33,5 +35,7 @@ public class IfElse {
             }
         }
 
-    }
+        FileInputStream inptstrm = new FileInputStream("dubu.txt");
+        System.out.println(inptstrm.read());
+    } // akhir dari method main
 }
