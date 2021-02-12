@@ -1,5 +1,6 @@
 package com.driko;
 
+import javax.print.DocFlavor;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -157,9 +158,11 @@ public class JavaOpration {
         dligent = (byte) (dligent >> 5);
         mail = String.format("%8s", Integer.toBinaryString(dligent)).replace(' ', '0');
         System.out.printf("%s = %d ", mail, dligent);
-        System.out.print(" << Shift Left 5 ");
+        System.out.print(" >> Shift Right 5 ");
 
-        byte h = 7;
+
+
+/////// Sekedar test
         byte l = 10;
         String love;
 
@@ -170,6 +173,48 @@ public class JavaOpration {
         l = (byte) (l << 1);
         love = String.format("%8s", Integer.toBinaryString(l)).replace(' ', '0');
         System.out.printf("%s = %d", love, l);
+        System.out.print("\n");
+        System.out.print("\n");
+
+
+        byte mydubu = 7;
+        byte h = 10;
+
+
+        kimDahyun(mydubu, h);
+
+        String coklat;
+        mydubu = (byte) (h & mydubu);
+        coklat = String.format("%8s", Integer.toBinaryString(mydubu)).replace(' ','0');
+        System.out.printf("%s = %d ", coklat, mydubu);
+        System.out.print(" <<< Operasi And Bitwise\n\n");
+
+        kimDahyun(mydubu, h);
+        mydubu = 7;
+        mydubu = (byte) (h | mydubu);
+        coklat = String.format("%8s", Integer.toBinaryString(mydubu)).replace(' ', '0');
+        System.out.printf("%s = %d ", coklat, mydubu);
+        System.out.print(" <<< Operasi OR Bitwise\n\n");
+
+        kimDahyun(h, mydubu);
+        mydubu = (byte) (h ^ mydubu);
+        coklat = String.format("%8s",Integer.toBinaryString(mydubu)).replace(' ', '0');
+        System.out.printf("%s = %d ", coklat, mydubu);
+        System.out.printf(" <<< Operasi XOR bitwise \n\n\n");
+
+
+
+        // todo Operator ternary
+
+        int lovekim = 7;
+
+    //  tipeData namaVariable = (parameter) ? "conditionTrue" : "conditionFalse";
+        String danswer = (lovekim < 10) ? "yes" : "YES";
+        System.out.println(danswer);
+
+
+
+
 
 
 
@@ -197,4 +242,25 @@ public class JavaOpration {
 
 
     } // end main method
+
+
+
+    // membuat Method untuk memanggil variable komprasi bitwise
+
+    private static void kimDahyun(byte kimsatu, byte kimdua){
+
+        //----------// Mereset ulang variable awal
+        kimsatu = 7;
+        kimdua = 10;
+        //----------//
+
+        String pocky, pie;
+        pocky = String.format("%8s", Integer.toBinaryString(kimdua)).replace(' ', '0');
+        System.out.printf("%s = %d\n", pocky, kimdua);
+
+        pie = String.format("%8s", Integer.toBinaryString(kimsatu)).replace(' ', '0');
+        System.out.printf("%s = %d\n", pie, kimsatu);
+        System.out.println("--------------------------------------");
+    }
+
 }
